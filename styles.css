@@ -1,11 +1,50 @@
 :root {
-    --primary: #;
-    --secondary: #;
+    --primary: #BA5D27;
+    --secondary: #0C7674;
     --white: #fffff5;
     --text: #000000;
 }
 
 body {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
     font-family: "Rosario", sans-serif;
     font-weight: 400;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Footer */
+.footer {
+    height: 85px;
+    width: 100%;
+    font-size: 10pt;
+    font-weight: 300;
+    background-color: var(--primary);
+    color: var(--white);
+    margin-top: 25px;
+}
+
+.footer__content {
+    height: 85px;
+    margin: 0 100px;
+    justify-content: space-between;
+    column-gap: 30px;
+    align-content: center;
+}
+
+.footer__content_social-media, .footer__content_copyright, .footer__content_project {
+    column-gap: 10px;
+    align-items: center;
+}
+
+.footer__content_social-media_link {
+    text-decoration: none;
+}
+
+.footer__content_social-media_icon:hover {
+    scale: .95;
 }
