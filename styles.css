@@ -1,0 +1,11 @@
+:root {
+    --primary: #;
+    --secondary: #;
+    --white: #fffff5;
+    --text: #000000;
+}
+
+body {
+    font-family: "Rosario", sans-serif;
+    font-weight: 400;
+}
