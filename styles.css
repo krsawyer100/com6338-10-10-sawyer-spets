@@ -1,3 +1,8 @@
+* { box-sizing: content-box;
+    margin: 0; 
+    padding: 0;
+ }
+
 :root {
     --primary: #BA5D27;
     --secondary: #0C7674;
@@ -12,6 +17,69 @@ body {
     font-family: "Rosario", sans-serif;
     font-weight: 400;
 
+}
+
+
+.main__hero {
+    height: 600px;
+    background-image: url("images/homepage-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+}
+
+h1 {
+    font-size: 60pt;
+    font-weight: 200;
+}
+
+h2 {
+    font-size:60pt;
+    font-weight: 200;
+}
+
+.main__hero {
+    height: 600px;
+    background-image: url("images/homepage-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+}
+
+.main__hero, h1 {
+    font-size: 40pt;
+    font-weight: 700;
+    padding-top: 350px;
+}
+
+.main__hero, h2 {
+    font-size: 25pt;
+    font-weight: 500px;
+    padding-top: 20px;
+   
+}
+
+.main__hero__call-to-action__button {
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+   
+/*change the number below to scale*/ 
+.main__hero__call-to-action__button:hover { 
+    transform: scale(1.5); 
+}
+
+.main__hero__call-to-action {
+    color: var(--white);
 }
 
 .flex {
