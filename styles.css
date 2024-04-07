@@ -16,12 +16,12 @@ body {
     border: 0;
     font-family: "Rosario", sans-serif;
     font-weight: 400;
-
+    background-color: var(--white);
 }
 
 /* Nav Bar */
 .nav {
-    display:flex;
+    display: flex;
     max-width: 1250px;
     height: 110px;
     margin: 0 auto;
@@ -38,7 +38,7 @@ body {
 .nav__link, .nav__logo {
     height: 60px;
     width: 10px;
-    color: var(--primary);
+    /* color: var(--primary); */
     padding-top: 20px;
 }
 
@@ -52,6 +52,22 @@ body {
 
 .nav__link:not(:first-of-type) {
     margin-left: 60px;
+}
+
+.nav__link:hover, .nav__logo:hover {
+    scale: .97;
+}
+
+.nav__logo_img:hover {
+    content: url(images/logo-blue.png);
+}
+
+.nav__link_img_cat:hover {
+    content: url(images/cat-nav-blue.png);
+}
+
+.nav__link_img_dog:hover {
+    content: url(images/dog-nav-blue.png);
 }
 
 /* Main Hero Section */
