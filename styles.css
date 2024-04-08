@@ -38,7 +38,6 @@ body {
 .nav__link, .nav__logo {
     height: 60px;
     width: 10px;
-    /* color: var(--primary); */
     padding-top: 20px;
 }
 
@@ -92,6 +91,13 @@ h2 {
     font-weight: 200;
 }
 
+h3 {
+    font-size: 36pt;
+    font-weight: 600;
+    color: var(__text);
+    padding-top: 20px;
+}
+
 .main__hero {
     height: 600px;
     background-image: url("images/homepage-banner.jpg");
@@ -131,6 +137,36 @@ h2 {
 
 .main__hero__call-to-action {
     color: var(--white);
+}
+
+/* Adoption A Pet Section*/
+.main__pet__adoption{
+    height: 550px;
+    background-image: url("images/bones-background.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 50px;    
+}
+
+.main__pet__adoption__img__container {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;      
+}
+
+.main__link_img_cat:hover, .main__link_img_dog:hover {
+    scale: .97;
+}
+
+.main__link_img_cat:hover {
+    content: url(images/cat-button-blue.png);
+}
+
+.main__link_img_dog:hover {
+    content: url(images/dog-button-blue.png);
 }
 
 .flex {
