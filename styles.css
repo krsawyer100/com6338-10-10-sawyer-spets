@@ -192,9 +192,22 @@ h3 {
     align-content: center;
 }
 
-.footer__content_social-media, .footer__content_copyright, .footer__content_project {
+.footer__content_social-media, .footer__content_copyright, .footer__content_form {
     column-gap: 10px;
     align-items: center;
+}
+
+.footer__content_form-label {
+    margin-right: 3px;
+}
+
+.footer__content_form-input {
+    background-color: var(--white);
+    border: var(--text) 1px solid;
+    border-radius: 3px;
+    color: var(--secondary);
+    padding: 3px;
+    font-size: 10pt;
 }
 
 .footer__content_social-media_link {
@@ -204,5 +217,14 @@ h3 {
 .footer__content_social-media_icon:hover {
     scale: .95;
 }
-    
 
+.footer__content_form-input:hover {
+    scale: .98;
+}
+
+.footer__content_form-input::placeholder {
+    color: var(--secondary);
+    font-size: 10pt;
+    font-weight: 300;
+    font-family: "Rosario", sans-serif;
+}
