@@ -11,7 +11,65 @@
     <title>Document</title>
 </head>
 <body>
+    <header class="header">
+        <nav class="nav">
+            <a class="nav__logo" href="index.html">
+                <img src="images/logo-orange.png" alt="Logo" width="300" class=" nav__logo_img">
+            </a>
+            <a class="nav__link" href="cat.html">
+                <img src="images/cat-nav-orange.png" alt="Cat" width="150" class="nav__link_img_cat">
+            </a>
+            <a class="nav__link" href="dog.html">    
+                <img src="images/dog-nav-orange.png" alt="Dog" width="150" class="nav__link_img_dog">
+            </a>
+        </nav>
+    </header>
 
+    <main class="main">
+        <section class="main__hero">
+            <h1 class="main__hero__call-to-action">In the market for a new furry friend?</h1>
+            <h2 class="main__hero__call-to-action">Check out cats and dogs available for adoption!</h2>
+            <a class="main__hero__call-to-action__button" href="#adoption-icon" style="background: url(images/arrow-icon.png)"></a>
+        </section>
+
+        <section class="main__pet__adoption" id="adoption-icon">
+            <h3 class ="main__pet__adoption_text" >Available for Adoption</h3>
+            <div class="main__pet__adoption__img__container">
+                <a class="main__cat_link" href="cat.html">
+                    <img src="images/cat-button-orange.png" alt="cat-icon" width="350" class="main__link_img_cat"> 
+                </a>
+                <a class="main__dog_link" href="dog.html">
+                    <img src="images/dog-button-orange.png" alt="dog-icon" width="350" class="main__link_img_dog">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content flex">
+            <div class="footer__content_social-media flex">
+                <p>Connect with us:</p>
+                <a class="footer__content_social-media_link" href="https://www.instagram.com/accounts/login/?hl=en" target="__BLANK">
+                    <img class="footer__content_social-media_icon" width="36px" height="36px" src="./images/instagram.png" alt="link the instagram">
+                </a>
+                <a class="footer__content_social-media_link" href="https://www.facebook.com/" target="__BLANK">
+                    <img class="footer__content_social-media_icon" width="36px" height="36px" src="./images/facebook.png" alt="link to facebook">
+                </a>
+                <a class="footer__content_social-media_link" href="https://twitter.com/i/flow/login" target="__BLANK">
+                    <img class="footer__content_social-media_icon" width="36px" height="36px" src="./images/twitter.png" alt="link to x or twitter">
+                </a>
+            </div>
+            <div class="footer__content_copyright flex">
+                <p>© Spets & Sawyer 2024</p>
+            </div>
+            <div class="footer__content_form flex">
+                <form>
+                    <label for="subscription" class="footer__content_form-label">Subscribe to our newsletter:</label>
+                    <input type="text" id="subscription" name="subscription" placeholder="Enter your email here" class="footer__content_form-input">
+                </form>
+            </div>
+        </div>
+    </footer>    
 <script src="index.js"></script>   
 </body>
 </html>
