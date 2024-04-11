@@ -19,6 +19,18 @@ body {
     background-color: var(--white);
 }
 
+h3 {
+    margin: 25px 100px;
+    font-size: 36pt;
+    color: var(--text);
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+/* Cats Page */
+.main__cat-cards-container {
+    margin: 0 100px;
+
 .main {
     margin: 30px 100px;
 }
@@ -98,13 +110,6 @@ h1 {
 h2 {
     font-size:60pt;
     font-weight: 200;
-}
-
-h3 {
-    font-size: 36pt;
-    font-weight: 600;
-    color: var(__text);
-    padding-top: 20px;
 }
 
 .main__hero {
