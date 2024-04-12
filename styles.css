@@ -19,6 +19,15 @@ body {
     background-color: var(--white);
 }
 
+.main {
+    margin: 30px 100px;
+}
+
+h4 {
+    font-size: 24pt;
+    font-weight: 500;
+}
+
 /* Nav Bar */
 .nav {
     display: flex;
@@ -183,6 +192,7 @@ h4 {
     display: flex;
 }
 
+
 /* Pet Facts*/
 .main__pet__facts {
     background-color: var(--primary);
@@ -214,6 +224,49 @@ h4 {
 
 .main__pet__facts_api {
     padding-top: 10px;
+=======
+/* Cat and dog page */
+.main__location {
+    text-align: center;
+}
+
+.main__location_title {
+    margin-bottom: 10px;
+}
+
+.main__location_form {
+    justify-content: center;
+}
+
+.main__location_form_input {
+    width: 500px;
+    height: 20px;
+    border: var(--primary) solid 2px;
+}
+
+.main__location_form_button {
+    padding: 3px 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: var(--primary) solid 2px;
+    margin-left: 5px;
+}
+
+.main__location_form_button:hover {
+    scale: .97;
+    cursor: pointer;
+    border: var(--secondary) 2px solid;
+    content: url(images/search-button-blue.png);
+    height: 20px;
+}
+
+.main__location_form_input:hover {
+    border: var(--secondary) 2px solid;
+    scale: .99
+}
+
+.main__location_form_input::placeholder {
+    text-align: center;
 }
 
 /* Footer */
@@ -235,9 +288,22 @@ h4 {
     align-content: center;
 }
 
-.footer__content_social-media, .footer__content_copyright, .footer__content_project {
+.footer__content_social-media, .footer__content_copyright, .footer__content_form {
     column-gap: 10px;
     align-items: center;
+}
+
+label {
+    margin-right: 3px;
+}
+
+input {
+    background-color: var(--white);
+    border: var(--text) 1px solid;
+    border-radius: 3px;
+    color: var(--secondary);
+    padding: 3px 5px;
+    font-size: 10pt;
 }
 
 .footer__content_social-media_link {
@@ -247,5 +313,14 @@ h4 {
 .footer__content_social-media_icon:hover {
     scale: .95;
 }
-    
 
+input:hover {
+    scale: .99;
+}
+
+input::placeholder {
+    color: var(--secondary);
+    font-size: 10pt;
+    font-weight: 300;
+    font-family: "Rosario", sans-serif;
+}

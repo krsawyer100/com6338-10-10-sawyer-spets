@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <a class="nav__logo" href="#">
+            <a class="nav__logo" href="index.html">
                 <img src="images/logo-orange.png" alt="Logo" width="300" class=" nav__logo_img">
             </a>
             <a class="nav__link" href="cat.html">
@@ -23,6 +23,17 @@
             </a>
         </nav>
     </header>
+    <main class="main">
+        <div class="main__location">
+            <h4 class="main__location_title">Enter your Location</h4>
+            <form class="main__location_form flex">
+                <input type="text" class="main__location_form_input" id="location" name="location" placeholder="Enter your city or zipcode">
+                <button for="location" class="main__location_form_button flex">
+                    <img src="images/search-button.png" alt="search" height="20px" class="main__location_form_button-img">
+                </button>
+            </form>
+        </div>
+    </main>
     <footer class="footer">
         <div class="footer__content flex">
             <div class="footer__content_social-media flex">
@@ -37,11 +48,11 @@
                     <img class="footer__content_social-media_icon" width="36px" height="36px" src="./images/twitter.png" alt="link to x or twitter">
                 </a>
             </div>
-            <div class="footer__content_copyright flex">
-                <p>© Spets & Sawyer 2024</p>
-            </div>
-            <div class="footer__content_project flex">
-                <p>COM6338 - Group Project</p>
+            <div class="footer__content_form flex">
+                <form>
+                    <label for="subscription" class="footer__content_form-label">Subscribe to our newsletter:</label>
+                    <input type="text" id="subscription" name="subscription" placeholder="Enter your email here" class="footer__content_form-input">
+                </form>
             </div>
         </div>
     </footer>    
