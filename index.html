@@ -10,7 +10,7 @@
     <meta name="description" content="document">
     <title>Document</title>
 </head>
-<body>
+<body onload="myfunction(e)">
     <header class="header">
         <nav class="nav">
             <a class="nav__logo" href="#">
@@ -36,11 +36,23 @@
             <h3 class ="main__pet__adoption_text" >Available for Adoption</h3>
             <div class="main__pet__adoption__img__container">
                 <a class="main__cat_link" href="cat.html">
-                    <img src="images/cat-button-orange.png" alt="cat-icon" width="350" class="main__link_img_cat"> 
+                    <img src="images/cat-button-orange.png" alt="cat-icon" class="main__link_img_cat"> 
                 </a>
                 <a class="main__dog_link" href="dog.html">
-                    <img src="images/dog-button-orange.png" alt="dog-icon" width="350" class="main__link_img_dog">
+                    <img src="images/dog-button-orange.png" alt="dog-icon" class="main__link_img_dog">
                 </a>
+            </div>
+        </section>
+
+        <section class="main__pet__facts">
+            <div class="main__pet__facts_container" id = facts_container>
+                <img src="images/dog_photo.jpeg" alt="dog-picture" class="main__facts_img_dog" id="img_size1">
+                <div class="main__pet__facts__div" id = factsDiv>
+                    <h3 class="main__pet__facts_text" >Did You Know?</h3>
+                    <h4 class="main__pet__facts_api" id="main__facts"></h4>
+                </div>
+            </div>
+                
             </div>
         </section>
     </main>

@@ -98,6 +98,11 @@ h3 {
     padding-top: 20px;
 }
 
+h4 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .main__hero {
     height: 600px;
     background-image: url("images/homepage-banner.jpg");
@@ -112,20 +117,21 @@ h3 {
 .main__hero, h1 {
     font-size: 40pt;
     font-weight: 700;
-    padding-top: 350px;
+    padding-top: 200px;
 }
 
 .main__hero, h2 {
     font-size: 25pt;
     font-weight: 500px;
-    padding-top: 20px;
+    padding-top: 30px;
    
 }
 
 .main__hero__call-to-action__button {
     border: none;
+    padding-top: 50px;
     padding: 15px 30px;
-    margin-top: 20px;
+    margin: 90px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -141,7 +147,7 @@ h3 {
 
 /* Adoption A Pet Section*/
 .main__pet__adoption{
-    height: 550px;
+    height: 600px;
     background-image: url("images/bones-background.jpg");
     background-size: cover;
     background-position: center;
@@ -149,12 +155,16 @@ h3 {
     padding-top: 50px;    
 }
 
+.main__link_img_cat, .main__link_img_dog {
+    width: 50%;
+}
 .main__pet__adoption__img__container {
     display: flex;
     flex-direction: row;
     justify-items: center;
     justify-content: space-evenly;
-    padding-top: 50px;      
+    padding-top: 50px;
+    
 }
 
 .main__link_img_cat:hover, .main__link_img_dog:hover {
@@ -171,6 +181,39 @@ h3 {
 
 .flex {
     display: flex;
+}
+
+/* Pet Facts*/
+.main__pet__facts {
+    background-color: var(--primary);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 20px;    
+}
+
+#img_size1{
+    width: 50%
+}
+
+.main__pet__facts_container {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 60px; 
+    color: var(--white);     
+}
+
+.main__pet__facts__div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.main__pet__facts_api {
+    padding-top: 10px;
 }
 
 /* Footer */
