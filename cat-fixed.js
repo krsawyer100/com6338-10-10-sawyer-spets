@@ -50,7 +50,7 @@ function renderCats (catData) {
     console.log(catDataArray)
     //reset cat cards
     catCardsContainer.innerHTML = ""
-    
+
     //add page title
     var catPageTitle = document.createElement('h3')
     catPageTitle.textContent = "Cats Available Near You"
@@ -75,18 +75,6 @@ function renderCats (catData) {
         catPic.src = catDataArray[catNum].attributes.pictureThumbnailUrl
         catPic.alt = catDataArray[catNum].attributes.name
         card.appendChild(catPic)
-        
-        // //creates divs for cat info
-        // var catInfoContainer = catDataArray[catNum].attributes.pictureThumbnailUrl;
-        // catInfoContainer = document.createElement('div')
-        // card.className = "main__cards-container_card-info"
-        // card.appendChild(catInfoContainer)
-
-        //creates p tag for names
-        // var catName = document.createElement('p')
-        // catName.textContent = "Name: " + catDataArray[catNum].attributes.name
-        // catName.className = "main__cards-container_card-info"
-        // card.appendChild(catName)
 
         //creates p tag for age group
         var catAgeGroup = document.createElement('p')
