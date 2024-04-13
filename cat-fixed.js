@@ -1,6 +1,6 @@
 const form = document.querySelector(".main__location_form")
 const catCardsContainer = document.querySelector(".main__cards-container")
-const catPageTitleContainer = document.querySelector(".main__cat-title")
+const catPageTitleContainer = document.querySelector(".main__page-title")
 
 form.onsubmit = function(e) {
     //Prevent default form function
@@ -8,6 +8,7 @@ form.onsubmit = function(e) {
     //Grab user input
     const searchTerm = form.location.value.trim()
     //Check for user input and if it is in zipcode format
+    console.log(searchTerm)
     if(!searchTerm || !(checkZipcodeFormat(searchTerm))) {
         form.location.value = ""
         form.location.placeholder = "Please enter a valid zipcode"
@@ -49,6 +50,7 @@ function renderCats (catData) {
     const catDataArray = Array.from(catData.data)
     console.log(catDataArray)
     //reset cat cards
+    catPageTitleContainer.innerHTML = ""
     catCardsContainer.innerHTML = ""
 
     //add page title

@@ -210,7 +210,7 @@ h2 {
 
 .main__location_form_button {
     padding: 3px 5px;
-    background-color: transparent;
+    background-color: var(--white);
     border-radius: 5px;
     border: var(--primary) solid 2px;
     margin-left: 5px;
