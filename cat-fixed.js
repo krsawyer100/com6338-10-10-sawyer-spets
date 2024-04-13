@@ -7,11 +7,11 @@ form.onsubmit = function(e) {
     e.preventDefault()
     //Grab user input
     const searchTerm = form.location.value.trim()
-    //Check for user input and if it is in zipcode format
-    console.log(searchTerm)
+    //Check for user input and if it is in zipcode format and tells user if it isn't
     if(!searchTerm || !(checkZipcodeFormat(searchTerm))) {
         form.location.value = ""
-        form.location.placeholder = "Please enter a valid zipcode"
+        catCardsContainer.innerHTML = `<h5> Location not found... Please try another zipcode</h5>`
+        catPageTitleContainer.innerHTML = ""
         return
     }
     //reset form
