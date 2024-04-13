@@ -27,7 +27,7 @@ form.onsubmit = function(e) {
             "data": {
                 "filterRadius": {
                     "miles": 25,
-                    "postalcode": `${searchTerm}`
+                    "postalcode": searchTerm
                 }
             }
         }
