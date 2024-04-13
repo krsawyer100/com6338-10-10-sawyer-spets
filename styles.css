@@ -27,10 +27,12 @@ h3 {
     padding-top: 20px;
 }
 
-/* Cats Page */
-.main__cat-cards-container {
-    margin: 0 100px;
+h5 {
+    font-size: 18pt;
+    font-weight: 500;
+}
 
+/* Cats Page */
 .main {
     margin: 30px 100px;
 }
@@ -231,6 +233,50 @@ h2 {
     text-align: center;
 }
 
+.main__cards-container {
+    margin: 30px 100px 125px;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.main__cards-container_card {
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    text-wrap: wrap;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__cards-container_card-name {
+    color: var(--white);
+    padding: 0 0 15px 0;
+}
+
+.main__cards-container_card-img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: var(--white) solid 2px;
+}
+
+.main__cards-container_card-info {
+    padding: 15px 0 5px 0;
+    color: var(--white);
+}
+
+.main__cards-container_card:hover {
+    background-color: var(--secondary);
+    scale: .99;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
 /* Footer */
 .footer {
     height: 85px;
@@ -240,6 +286,9 @@ h2 {
     background-color: var(--primary);
     color: var(--white);
     margin-top: 25px;
+    border-top: var(--white) solid 3px;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer__content {

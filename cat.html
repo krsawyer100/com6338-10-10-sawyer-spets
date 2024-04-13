@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cats Available</title>
 </head>
 <body>
     <header class="header">
@@ -27,13 +27,14 @@
         <div class="main__location">
             <h4 class="main__location_title">Enter your Location</h4>
             <form class="main__location_form flex">
-                <input type="text" class="main__location_form_input" id="location" name="location" placeholder="Enter your city or zipcode">
-                <button for="location" class="main__location_form_button flex">
+                <input type="text" class="main__location_form_input" id="location" name="location" placeholder="Enter your zipcode here">
+                <button class="main__location_form_button flex" type="submit">
                     <img src="images/search-button.png" alt="search" height="20px" class="main__location_form_button-img">
                 </button>
             </form>
         </div>
-        <div class="main__cat-cards-container flex"></div>
+        <div class="main__cat-title"></div>
+        <div class="main__cards-container flex"></div>
     </main>
     <footer class="footer">
         <div class="footer__content flex">
@@ -45,6 +46,9 @@
                 <a class="footer__content_social-media_link" href="https://www.facebook.com/" target="__BLANK">
                     <img class="footer__content_social-media_icon" width="36px" height="36px" src="./images/facebook.png" alt="link to facebook">
                 </a>
+                <div class="footer__content_copyright flex">
+                    <p>© Spets & Sawyer 2024</p>
+                </div>
                 <a class="footer__content_social-media_link" href="https://twitter.com/i/flow/login" target="__BLANK">
                     <img class="footer__content_social-media_icon" width="36px" height="36px" src="./images/twitter.png" alt="link to x or twitter">
                 </a>
@@ -57,6 +61,6 @@
             </div>
         </div>
     </footer>    
-    <script src="cat.js"></script>
+    <script src="cat-fixed.js"></script>
 </body>
 </html>
