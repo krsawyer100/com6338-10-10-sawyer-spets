@@ -62,33 +62,27 @@ console.log('print data')
     var h3 = document.createElement('h3')
     h3.textContent = ("Did you Know?")
     factsDiv.appendChild(h3)
+    
+    factsDiv.appendChild(document.createElement('br'))
+    var h5 = document.createElement('h5')
+        h5.textContent = ("Breed:" + " " + data[0].breeds[0].name)
+        factsDiv.appendChild(h5)
 
-    //create fact
-    var fact = document.createElement('h5')
-    fact.className = "main__pet__facts-fact"
-    fact.textContent = data[0].breeds[0].name + "'s are bred for " + data[0].breeds[0].bred_for.toLowerCase() + " and have a " + data[0].breeds[0].temperament.toLowerCase() + " temperament"
-    factsDiv.appendChild(fact)
+    factsDiv.appendChild(document.createElement('br'))
     
-    // factsDiv.appendChild(document.createElement('br'))
-    // var h4 = document.createElement('h4')
-    //     h4.textContent = ("Breed Name: " + " " + data[0].breeds[0].name)
-    //     factsDiv.appendChild(h4)
-
-    // factsDiv.appendChild(document.createElement('br'))
+    var h5 = document.createElement('h5')
+        h5.textContent = ("Bred For: " + data[0].breeds[0].bred_for)
+        factsDiv.appendChild(h5)
     
-    // var h4 = document.createElement('h4')
-    //     h4.textContent = ("Bred For: " + data[0].breeds[0].bred_for)
-    //     factsDiv.appendChild(h4)
-    
-    // factsDiv.appendChild(document.createElement('br'))   
-    //     var h4 = document.createElement('h4')
-    //     h4.textContent = ("Temperament:")
-    //     factsDiv.appendChild(h4)  
+    factsDiv.appendChild(document.createElement('br'))   
+        var h5 = document.createElement('h5')
+        h5.textContent = ("Temperament:")
+        factsDiv.appendChild(h5)  
 
     
-    // var h4 = document.createElement('h4')
-    //     h4.textContent = (data[0].breeds[0].temperament)
-    //     factsDiv.appendChild(h4)  
+    var h5 = document.createElement('h5')
+        h5.textContent = (data[0].breeds[0].temperament)
+        factsDiv.appendChild(h5)  
 })}
 
 //Footer form functionality
