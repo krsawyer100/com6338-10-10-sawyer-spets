@@ -49,7 +49,7 @@ form.onsubmit = function(e) {
 
 //function to fetch API information
 function fetchApiInfo() {
-    fetch(`https://api.rescuegroups.org/v5/public/animals/search/available/cats?limit=24&key=1xbUifbS`, {
+    fetch(`https://api.rescuegroups.org/v5/public/animals/search/available/dogs?limit=24&key=1xbUifbS`, {
         method: "GET",
         headers: {
             "Content-Type": "application/vnd.api+json",
@@ -63,7 +63,7 @@ function fetchApiInfo() {
             console.log(res)
             return res.json()
         }
-    }).then(renderCats)
+    }).then(renderDogs)
     .catch(function(err) {
         console.log(err.message)
     })
@@ -125,7 +125,7 @@ function toggleMenu() {
     if (isOpen) {
         navBtn.focus()
         navBtnImg.style.content = "url(images/navBtn-blue.png)"
-        navBtnImg.style.hover.content = "url(images/navBtn-blue.png)"
+        navBtnImg.style.content.hover = "url(images/navBtn-blue.png)"
     } else {
         navBtnImg.style.content = "url(images/navBtn.png)"
     }

@@ -126,7 +126,7 @@ function toggleMenu() {
     if (isOpen) {
         navBtn.focus()
         navBtnImg.style.content = "url(images/navBtn-blue.png)"
-        navBtnImg.style.hover.content = "url(images/navBtn-blue.png)"
+        navBtnImg.style.content.hover = "url(images/navBtn-blue.png)"
     } else {
         navBtnImg.style.content = "url(images/navBtn.png)"
     }

@@ -64,27 +64,32 @@ console.log('print data')
 
     //create facts title
     var h3 = document.createElement('h3')
+    h3.className = "main__pet__facts_text"
     h3.textContent = ("Did you Know?")
     factsDiv.appendChild(h3)
     
     factsDiv.appendChild(document.createElement('br'))
     var h5 = document.createElement('h5')
+        h5.className = "main__pet__facts_api-text"
         h5.textContent = ("Breed:" + " " + data[0].breeds[0].name)
         factsDiv.appendChild(h5)
 
     factsDiv.appendChild(document.createElement('br'))
     
     var h5 = document.createElement('h5')
+        h5.className = "main__pet__facts_api-text"
         h5.textContent = ("Bred For: " + data[0].breeds[0].bred_for)
         factsDiv.appendChild(h5)
     
     factsDiv.appendChild(document.createElement('br'))   
         var h5 = document.createElement('h5')
+        h5.className = "main__pet__facts_api-text"
         h5.textContent = ("Temperament:")
         factsDiv.appendChild(h5)  
 
     
     var h5 = document.createElement('h5')
+        h5.className = "main__pet__facts_api-text"
         h5.textContent = (data[0].breeds[0].temperament)
         factsDiv.appendChild(h5)  
 })}
@@ -96,7 +101,7 @@ function toggleMenu() {
     if (isOpen) {
         navBtn.focus()
         navBtnImg.style.content = "url(images/navBtn-blue.png)"
-        navBtnImg.style.hover.content = "url(images/navBtn-blue.png)"
+        navBtnImg.style.content.hover = "url(images/navBtn-blue.png)"
     } else {
         navBtnImg.style.content = "url(images/navBtn.png)"
     }
