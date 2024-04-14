@@ -228,6 +228,57 @@ h2 {
     padding-top: 10px;
 }
 
+/* Get involved Section */
+.main__involved {
+    margin: 0 100px;
+    height: 700px;
+    margin-bottom: 150px;
+}
+
+.main__involved_info-container {
+    column-gap: 25px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main__involved_info_img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.main__involved_info_subtitle {
+    color: var(--secondary);
+    padding: 0;
+    margin-left: auto;
+}
+
+.main__involved_info-container_adopt, .main__involved_info-container_foster, .main__involved_info-container_volunteer {
+    padding: 0 25px;
+    width: 300px;
+    height: 500px;
+}
+
+.main__involved_info_text {
+    text-wrap: wrap;
+    margin: 15px 0;
+}
+
+.main__involved_info_link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 16pt;
+    padding-top: 25px;
+}
+
+.main__involved_info_link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+    font-size: 15.9pt;
+    transition: 0.4s;
+}
+
 /* Cat and dog page */
 .main__location {
     text-align: center;
