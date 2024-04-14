@@ -21,7 +21,7 @@ document.body.onload = function(e) {
     if (userEmail !== null) {
         footerFormDiv.innerHTML = `<p>Thanks for subscribing, ${userEmail}`
     }
-    //api 
+    //api information
     const res = fetch(URL)  
     
     .then (function(res) {
@@ -55,32 +55,40 @@ console.log("data",data)
 
 
 console.log('print data')
-factsDiv.innerHTML = ""
+    //reset facts div
+    factsDiv.innerHTML = ""
 
+    //create facts title
     var h3 = document.createElement('h3')
-        h3.textContent = ("Did you Know?")
-        factsDiv.appendChild(h3)
+    h3.textContent = ("Did you Know?")
+    factsDiv.appendChild(h3)
 
-    factsDiv.appendChild(document.createElement('br'))
-    var h4 = document.createElement('h4')
-        h4.textContent = ("Breed Name: " + " " + data[0].breeds[0].name)
-        factsDiv.appendChild(h4)
+    //create fact
+    var fact = document.createElement('h5')
+    fact.className = 
+    fact.textContent = data[0].breeds[0].name + "'s are bred for " + data[0].breeds[0].bred_for.toLowerCase() + " and have a " + data[0].breeds[0].temperament.toLowerCase() + " temperament"
+    factsDiv.appendChild(fact)
+    
+    // factsDiv.appendChild(document.createElement('br'))
+    // var h4 = document.createElement('h4')
+    //     h4.textContent = ("Breed Name: " + " " + data[0].breeds[0].name)
+    //     factsDiv.appendChild(h4)
 
-    factsDiv.appendChild(document.createElement('br'))
+    // factsDiv.appendChild(document.createElement('br'))
     
-    var h4 = document.createElement('h4')
-        h4.textContent = ("Bred For: " + data[0].breeds[0].bred_for)
-        factsDiv.appendChild(h4)
+    // var h4 = document.createElement('h4')
+    //     h4.textContent = ("Bred For: " + data[0].breeds[0].bred_for)
+    //     factsDiv.appendChild(h4)
     
-    factsDiv.appendChild(document.createElement('br'))   
-        var h4 = document.createElement('h4')
-        h4.textContent = ("Temperament:")
-        factsDiv.appendChild(h4)  
+    // factsDiv.appendChild(document.createElement('br'))   
+    //     var h4 = document.createElement('h4')
+    //     h4.textContent = ("Temperament:")
+    //     factsDiv.appendChild(h4)  
 
     
-    var h4 = document.createElement('h4')
-        h4.textContent = (data[0].breeds[0].temperament)
-        factsDiv.appendChild(h4)  
+    // var h4 = document.createElement('h4')
+    //     h4.textContent = (data[0].breeds[0].temperament)
+    //     factsDiv.appendChild(h4)  
 })}
 
 //Footer form functionality
@@ -96,7 +104,7 @@ footerForm.onsubmit = function(e) {
     }
 }
 
-// //Email validation
+//Email validation
 const validateUserEmail = (userEmail) => {
     return userEmail.match(
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
