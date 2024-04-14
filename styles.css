@@ -338,7 +338,7 @@ h2 {
     align-content: center;
 }
 
-.footer__content_social-media, .footer__content_copyright, .footer__content_form {
+.footer__content_social-media, .footer__content_copyright, .footer__content_form-container {
     column-gap: 10px;
     align-items: center;
 }
