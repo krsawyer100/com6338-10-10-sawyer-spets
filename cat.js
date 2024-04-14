@@ -6,9 +6,16 @@ const catPageTitleContainer = document.querySelector(".main__page-title")
 var footerFormDiv = document.querySelector(".footer__content_form-container")
 var footerForm = document.querySelector(".footer__content_form")
 
-//display user email if in storage
+//display user email and last search if in storage
 document.body.onload = function(e) {
     e.preventDefault()
+    //last search
+    searchTerm = localStorage.getItem('user-zipcode')
+    if (searchTerm !== null) {
+       //fetch API for onload 
+       fetchApiInfo()
+    }
+    //email
     userEmail = localStorage.getItem('user-email')
     if (userEmail !== null) {
         footerFormDiv.innerHTML = `<p>Thanks for subscribing, ${userEmail}`
@@ -27,23 +34,22 @@ form.onsubmit = function(e) {
         catCardsContainer.innerHTML = `<h5> Location not found... Please try another zipcode</h5>`
         catPageTitleContainer.innerHTML = ""
         return
+    } else {
+        localStorage.setItem('user-zipcode', searchTerm)
     }
     //reset form
     form.location.value = ""
     //fetch API info
+    fetchApiInfo()
+}
+
+//function to fetch API information
+function fetchApiInfo() {
     fetch(`https://api.rescuegroups.org/v5/public/animals/search/available/cats?limit=24&key=1xbUifbS`, {
         method: "GET",
         headers: {
             "Content-Type": "application/vnd.api+json",
             "Authorization": "1xbUifbS"
-        },
-        data: {
-            "data": {
-                "filterRadius": {
-                    "miles": 25,
-                    "postalcode": searchTerm
-                }
-            }
         }
     })
     .then(function(res)  {
@@ -59,6 +65,7 @@ form.onsubmit = function(e) {
     })
 }
 
+//function rendering cat info for page
 function renderCats (catData) {
     //Converts data into an array
     const catDataArray = Array.from(catData.data)
@@ -68,8 +75,9 @@ function renderCats (catData) {
     catCardsContainer.innerHTML = ""
 
     //add page title
+    searchTerm = localStorage.getItem('user-zipcode')
     var catPageTitle = document.createElement('h3')
-    catPageTitle.textContent = `Cats Available Near You`
+    catPageTitle.textContent = `Cats Available Near ${searchTerm}`
     catPageTitleContainer.appendChild(catPageTitle)
 
     //Card creation
