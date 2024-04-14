@@ -4,15 +4,15 @@ const factsDiv = document.getElementById("factsDiv")
 const URL = "https://api.thedogapi.com/v1/images/search?limit=20&api_key=live_0gO5LSOr86SNLIxqAzjOLsieKJfbl8LNsCBZJ9foUHXFANbfMBWcW2XIVthwqGAE&";
 var form = document.querySelector('form')
 
-//Grabbing footer info
-var footerFormDiv = document.querySelector(".footer__content_form-container")
-var footerForm = document.querySelector(".footer__content_form")
-
 const ranDogFacts = document.getElementById(main__facts)
 console.log("start");
 console.log(URL)
 
 var data = data
+
+//Grabbing footer info
+var footerFormDiv = document.querySelector(".footer__content_form-container")
+var footerForm = document.querySelector(".footer__content_form")
 
 document.body.onload = function(e) {
     e.preventDefault()
@@ -65,7 +65,7 @@ console.log('print data')
 
     //create fact
     var fact = document.createElement('h5')
-    fact.className = 
+    fact.className = "main__pet__facts-fact"
     fact.textContent = data[0].breeds[0].name + "'s are bred for " + data[0].breeds[0].bred_for.toLowerCase() + " and have a " + data[0].breeds[0].temperament.toLowerCase() + " temperament"
     factsDiv.appendChild(fact)
     
