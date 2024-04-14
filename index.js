@@ -1,8 +1,8 @@
 
+/*Facts Section */
 const factsContainer = document.querySelector("main__pet__facts_container")
 const factsDiv = document.getElementById("factsDiv")
 const URL = "https://api.thedogapi.com/v1/images/search?limit=20&api_key=live_0gO5LSOr86SNLIxqAzjOLsieKJfbl8LNsCBZJ9foUHXFANbfMBWcW2XIVthwqGAE&";
-var form = document.querySelector('form')
 
 const ranDogFacts = document.getElementById(main__facts)
 console.log("start");
@@ -18,7 +18,6 @@ document.body.onload = function(e) {
             if (res.status !== 200) {
             throw new Error('picture not found')
             }
-            console.log(" after 200 check") 
             return res.json()
     })
 
@@ -43,8 +42,6 @@ console.log("data",data)
     console.log('dog id', data[0].breeds[0].id)
 }
 
-
-console.log('print data')
 factsDiv.innerHTML = ""
 
     var h3 = document.createElement('h3')
@@ -73,3 +70,17 @@ factsDiv.innerHTML = ""
         factsDiv.appendChild(h4)  
    
 })}
+const formDiv = document.querySelector("footer__content_form")
+const form = document.getElementById()((form))
+const inputEl = document.getElementById("subscription")
+
+ondeyup = function subscribe(e) {
+    e.preventDefault()
+    var userEmail = inputEl
+    if (! userEmail .includes("@")) {
+        throw new (err) ("try again")
+    } else {
+        throw new (err) ("please Enter Your Email")
+    }
+}
+console.log("Thank you for Subscribing")
