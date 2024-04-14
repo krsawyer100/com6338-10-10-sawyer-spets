@@ -4,6 +4,10 @@ const factsDiv = document.getElementById("factsDiv")
 const URL = "https://api.thedogapi.com/v1/images/search?limit=20&api_key=live_0gO5LSOr86SNLIxqAzjOLsieKJfbl8LNsCBZJ9foUHXFANbfMBWcW2XIVthwqGAE&";
 var form = document.querySelector('form')
 
+//Grabbing footer info
+var footerFormDiv = document.querySelector(".footer__content_form-container")
+var footerForm = document.querySelector(".footer__content_form")
+
 const ranDogFacts = document.getElementById(main__facts)
 console.log("start");
 console.log(URL)
@@ -12,6 +16,12 @@ var data = data
 
 document.body.onload = function(e) {
     e.preventDefault()
+    //display user email if in storage
+    userEmail = localStorage.getItem('user-email')
+    if (userEmail !== null) {
+        footerFormDiv.innerHTML = `<p>Thanks for subscribing, ${userEmail}`
+    }
+    //api 
     const res = fetch(URL)  
     
     .then (function(res) {
@@ -71,5 +81,24 @@ factsDiv.innerHTML = ""
     var h4 = document.createElement('h4')
         h4.textContent = (data[0].breeds[0].temperament)
         factsDiv.appendChild(h4)  
-   
 })}
+
+//Footer form functionality
+footerForm.onsubmit = function(e) {
+    //Prevent default form function
+    e.preventDefault()
+    //grab user email
+    var userEmail = footerForm.subscription.value.trim()
+    //display if user has subscribed
+    if (validateUserEmail(userEmail)) {
+        localStorage.setItem('user-email', userEmail)
+        footerFormDiv.innerHTML = `<p>Thanks for subscribing, ${userEmail}`
+    }
+}
+
+// //Email validation
+const validateUserEmail = (userEmail) => {
+    return userEmail.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+  }
