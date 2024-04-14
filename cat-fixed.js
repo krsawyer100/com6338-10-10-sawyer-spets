@@ -69,7 +69,7 @@ function renderCats (catData) {
 
     //add page title
     var catPageTitle = document.createElement('h3')
-    catPageTitle.textContent = "Cats Available Near You"
+    catPageTitle.textContent = `Cats Available Near You`
     catPageTitleContainer.appendChild(catPageTitle)
 
     //Card creation

@@ -1,8 +1,7 @@
 
-const factsContainer = document.querySelector("main__pet__facts_container")
+const factsContainer = document.querySelector(".main__pet__facts_container")
 const factsDiv = document.getElementById("factsDiv")
 const URL = "https://api.thedogapi.com/v1/images/search?limit=20&api_key=live_0gO5LSOr86SNLIxqAzjOLsieKJfbl8LNsCBZJ9foUHXFANbfMBWcW2XIVthwqGAE&";
-var form = document.querySelector('form')
 
 //Grabbing footer info
 var footerFormDiv = document.querySelector(".footer__content_form-container")
