@@ -1,3 +1,4 @@
+/* For all pages */
 * { box-sizing: content-box;
     margin: 0; 
     padding: 0;
@@ -19,6 +20,18 @@ body {
     background-color: var(--white);
 }
 
+h1 {
+    font-size: 60pt;
+    font-weight: 600;
+    margin: 0 100px;
+}
+
+h2 {
+    font-size: 25pt;
+    font-weight: 500px;
+    margin: 0 100px;
+}
+
 h3 {
     margin: 25px 100px;
     font-size: 36pt;
@@ -27,53 +40,57 @@ h3 {
     padding-top: 20px;
 }
 
+h4 {
+    font-size: 24pt;
+    font-weight: 500;
+    margin: 0 100px;
+}
+
 h5 {
     font-size: 18pt;
     font-weight: 500;
 }
 
-/* Cats Page */
-.main {
-    margin: 30px 100px;
-}
-
-h4 {
-    font-size: 24pt;
-    font-weight: 500;
+.flex {
+    display: flex;
 }
 
 /* Nav Bar */
-.nav {
-    display: flex;
-    max-width: 1250px;
-    height: 110px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
 .header {
     background-color: var(--white);
     padding: 0;
     border-bottom: var(--primary) 3px solid;
-    position: sticky;  
+    position: sticky;
+    top: 0;
+    z-index: 1;
 } 
 
-.nav__link, .nav__logo {
-    height: 60px;
-    width: 10px;
-    padding-top: 20px;
+.nav {
+    display: flex;
+    max-width: 100%;
+    height: 110px;
+    margin: 0 100px;
+    box-sizing: border-box;
+    align-items: center;
 }
 
 .nav__logo {
     margin-right: auto;
 }
 
-.nav__link {
-    padding-right: 120px;
+.nav__logo_img {
+    height: 80px;
+    width: auto;
+    margin-right: 50px;
 }
 
-.nav__link:not(:first-of-type) {
-    margin-left: 60px;
+.nav__link {
+    margin-left: 40px;
+}
+
+.nav__link_img_cat, .nav__link_img_dog {
+    height: 50px;
+    width: auto;
 }
 
 .nav__link:hover, .nav__logo:hover {
@@ -94,118 +111,103 @@ h4 {
 
 /* Main Hero Section */
 .main__hero {
-    height: 600px;
+    height: 700px;
+    width: 100%;
     background-image: url("images/homepage-banner.jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;   
-}
-
-h1 {
-    font-size: 60pt;
-    font-weight: 200;
-}
-
-h2 {
-    font-size:60pt;
-    font-weight: 200;
-}
-
-.main__hero {
-    height: 600px;
-    background-image: url("images/homepage-banner.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;   
+    justify-content: center;
+    text-align: center;
+    padding: 25px 0; 
 }
 
 .main__hero, h1 {
-    font-size: 40pt;
-    font-weight: 700;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .main__hero, h2 {
-    font-size: 25pt;
-    font-weight: 500px;
     padding-top: 30px;
-   
-}
-
-.main__hero__call-to-action__button {
-    border: none;
-    padding-top: 50px;
-    padding: 15px 30px;
-    margin: 90px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-   
-/*change the number below to scale*/ 
-.main__hero__call-to-action__button:hover { 
-    transform: scale(1.5); 
 }
 
 .main__hero__call-to-action {
     color: var(--white);
 }
 
+.main__hero__call-to-action__button {
+    border: none;
+    padding-top: 50px;
+    padding: 15px 30px;
+    margin: 90px 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+   
+.main__hero__call-to-action__button:hover { 
+    scale: 0.92;
+}
+
 /* Adoption A Pet Section*/
-.main__pet__adoption{
-    height: 600px;
+.main__pet-adoption{
+    height: 700px;
     background-image: url("images/bones-background.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding-top: 50px;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0; 
 }
 
-.main__link_img_cat, .main__link_img_dog {
-    width: 50%;
+.main__pet-adoption_title {
+    margin: 0 100px;
 }
-.main__pet__adoption__img__container {
-    display: flex;
+
+.main__pet__adoption-img_container {
     flex-direction: row;
-    justify-items: center;
+    align-items: center;
     justify-content: space-evenly;
-    padding-top: 50px;
-    
+    padding: 70px 0;
+    margin: 0 100px;
+    flex-wrap: wrap;
 }
 
-.main__link_img_cat:hover, .main__link_img_dog:hover {
+.main__link_img-cat, .main__link_img-dog {
+    width: 250px;
+    height: auto;
+    padding: 15px 50px;
+}
+
+.main__link_img-cat:hover, .main__link_img-dog:hover {
     scale: .97;
 }
 
-.main__link_img_cat:hover {
+.main__link_img-cat:hover {
     content: url(images/cat-button-blue.png);
+    z-index: 0;
 }
 
-.main__link_img_dog:hover {
+.main__link_img-dog:hover {
     content: url(images/dog-button-blue.png);
+    z-index: 0;
 }
 
-.flex {
-    display: flex;
-}
-
-
-/* Pet Facts*/
+/*Pet Facts*/
 .main__pet__facts {
     background-color: var(--primary);
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding-top: 20px;    
+    padding-top: 20px;
+    height: 700px;
+    margin-bottom: 100px;  
 }
 
-#img_size1{
-    width: 50%
+.main__facts_img {
+    width: 50%;
+    height: 100%;
 }
 
 .main__pet__facts_container {
@@ -215,7 +217,8 @@ h2 {
     justify-content: space-evenly;
     padding-top: 40px;
     padding-bottom: 60px; 
-    color: var(--white);     
+    color: var(--white);
+    margin: 0 100px;       
 }
 
 .main__pet__facts__div {
@@ -228,9 +231,62 @@ h2 {
     padding-top: 10px;
 }
 
+/* Get involved Section */
+.main__involved {
+    margin: 0 100px;
+    height: 700px;
+    margin-bottom: 150px;
+}
+
+.main__involved_info-container {
+    column-gap: 25px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main__involved_info_img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.main__involved_info_subtitle {
+    color: var(--secondary);
+    padding: 0;
+    margin-left: auto;
+}
+
+.main__involved_info-container_adopt, .main__involved_info-container_foster, .main__involved_info-container_volunteer {
+    padding: 0 25px;
+    width: 300px;
+    height: 500px;
+}
+
+.main__involved_info_text {
+    text-wrap: wrap;
+    margin: 15px 0;
+}
+
+.main__involved_info_link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 16pt;
+    padding-top: 25px;
+}
+
+.main__involved_info_link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+    font-size: 15.9pt;
+    transition: 0.4s;
+}
+
 /* Cat and dog page */
 .main__location {
     text-align: center;
+    align-items: center;
+    margin: 25px 100px;
 }
 
 .main__location_title {
@@ -261,11 +317,13 @@ h2 {
     border: var(--secondary) 2px solid;
     content: url(images/search-button-blue.png);
     height: 20px;
+    z-index: 0;
 }
 
 .main__location_form_input:hover {
     border: var(--secondary) 2px solid;
-    scale: .99
+    scale: .99;
+    z-index: 0;
 }
 
 .main__location_form_input::placeholder {
@@ -277,6 +335,7 @@ h2 {
     flex-wrap: wrap;
     column-gap: 25px;
     row-gap: 25px;
+    justify-content: center;
 }
 
 .main__cards-container_card {
@@ -314,6 +373,7 @@ h2 {
     scale: .99;
     transition: 0.4s;
     cursor: pointer;
+    z-index: 0;
 }
 
 /* Footer */
@@ -336,6 +396,7 @@ h2 {
     justify-content: space-between;
     column-gap: 30px;
     align-content: center;
+    flex-wrap: wrap;
 }
 
 .footer__content_social-media, .footer__content_copyright, .footer__content_form-container {
@@ -362,6 +423,7 @@ input {
 
 .footer__content_social-media_icon:hover {
     scale: .95;
+
 }
 
 input:hover {
