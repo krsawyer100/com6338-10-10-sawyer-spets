@@ -93,6 +93,12 @@ h5 {
     width: auto;
 }
 
+.nav__btn {
+    display: none;
+    background-color: var(--white);
+    border: none;
+}
+
 .nav__link:hover, .nav__logo:hover {
     scale: .97;
 }
@@ -107,6 +113,15 @@ h5 {
 
 .nav__link_img_dog:hover {
     content: url(images/dog-nav-blue.png);
+}
+
+.nav__btn:hover, .nav__btn:focus {
+    scale: .95;
+    cursor: pointer;
+}
+
+.nav__btn_img:hover {
+    content: url(images/navBtn-blue.png);
 }
 
 /* Main Hero Section */
@@ -436,3 +451,53 @@ input::placeholder {
     font-weight: 300;
     font-family: "Rosario", sans-serif;
 }
+
+/* Webpage Responsiveness */
+@media screen and (max-width: 900px) {
+    /* nav bar  */
+    .nav {
+        margin: 0 25px;
+    }
+
+    .nav__btn {
+        display: block;
+    }
+
+    .nav__menu {
+        display: none;
+        background-color: var(--white);
+        border-top: var(--primary) solid 3px;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        visibility: visible;
+        transition: transform 100ms;
+        padding: 0;
+        top: 110px;
+        right: 0;
+    }
+    .nav__menu.show-menu {
+        transform: none;
+        display: flex;
+    }
+
+    .nav__link {
+        opacity: 0;
+        padding: 25px 0;
+        margin: 0;
+        text-align: center;
+        visibility: hidden;
+        border-bottom: var(--primary) solid 2px;
+    }
+    .nav .nav__menu.show-menu .nav__link {
+        visibility: visible;
+        animation: fade-in 100ms ease 100ms 1 forwards;
+    }
+
+}
+
+@keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }

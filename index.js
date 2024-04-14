@@ -1,4 +1,9 @@
+//Grabbing navigation bar info
+var navBtn = document.querySelector(".nav__btn")
+var navMenu = document.querySelector(".nav__menu")
+var navBtnImg = document.querySelector(".nav__btn_img")
 
+//Grabbing Pet Facts Section info
 const factsContainer = document.querySelector(".main__pet__facts_container")
 const factsDiv = document.getElementById("factsDiv")
 const URL = "https://api.thedogapi.com/v1/images/search?limit=20&api_key=live_0gO5LSOr86SNLIxqAzjOLsieKJfbl8LNsCBZJ9foUHXFANbfMBWcW2XIVthwqGAE&";
@@ -84,6 +89,39 @@ console.log('print data')
         factsDiv.appendChild(h5)  
 })}
 
+//nav menu functionality
+function toggleMenu() {
+    var isOpen = navMenu.classList.toggle('show-menu')
+    navBtn.setAttribute('aria-expanded', isOpen)
+    if (isOpen) {
+        navBtn.focus()
+        navBtnImg.style.content = "url(images/navBtn-blue.png)"
+        navBtnImg.style.hover.content = "url(images/navBtn-blue.png)"
+    } else {
+        navBtnImg.style.content = "url(images/navBtn.png)"
+    }
+}
+
+navBtn.addEventListener("click", function(e) {
+    e.stopPropagation()
+    toggleMenu()
+    console.log("clicked")
+})
+
+document.addEventListener("click", function(e) {
+    if(navMenu.classList.contains('show-menu') && !navMenu.contains(e.target)) {
+        toggleMenu()
+        console.log("clicked")
+    }
+})
+
+document.addEventListener("keyup", function(e) {
+    if (e.key === 'Escape' && navMenu.classList.contains('show-menu')) {
+        toggleMenu()
+        console.log("clicked")
+    }
+})
+
 //Footer form functionality
 footerForm.onsubmit = function(e) {
     //Prevent default form function
@@ -102,4 +140,4 @@ const validateUserEmail = (userEmail) => {
     return userEmail.match(
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
-  }
+}
