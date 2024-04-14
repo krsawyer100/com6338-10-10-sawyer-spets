@@ -6,9 +6,16 @@ const dogPageTitleContainer = document.querySelector(".main__page-title")
 var footerFormDiv = document.querySelector(".footer__content_form-container")
 var footerForm = document.querySelector(".footer__content_form")
 
-//display user email if in storage
+//display user email and last search if in storage
 document.body.onload = function(e) {
     e.preventDefault()
+    //last search
+    searchTerm = localStorage.getItem('user-zipcode')
+    if (searchTerm !== null) {
+       //fetch API for onload 
+       fetchApiInfo()
+    }
+    //email
     userEmail = localStorage.getItem('user-email')
     if (userEmail !== null) {
         footerFormDiv.innerHTML = `<p>Thanks for subscribing, ${userEmail}`
@@ -26,23 +33,22 @@ form.onsubmit = function(e) {
         dogCardsContainer.innerHTML = `<h5> Location not found... Please try another zipcode</h5>`
         dogPageTitleContainer.innerHTML = ""
         return
+    } else {
+        localStorage.setItem('user-zipcode', searchTerm)
     }
     //reset form
     form.location.value = ""
     //fetch API info
-    fetch(`https://api.rescuegroups.org/v5/public/animals/search/available/dogs?limit=24&key=1xbUifbS`, {
+    fetchApiInfo()
+}
+
+//function to fetch API information
+function fetchApiInfo() {
+    fetch(`https://api.rescuegroups.org/v5/public/animals/search/available/cats?limit=24&key=1xbUifbS`, {
         method: "GET",
         headers: {
             "Content-Type": "application/vnd.api+json",
             "Authorization": "1xbUifbS"
-        },
-        data: {
-            "data": {
-                "filterRadius": {
-                    "miles": 25,
-                    "postalcode": searchTerm
-                }
-            }
         }
     })
     .then(function(res)  {
@@ -52,12 +58,13 @@ form.onsubmit = function(e) {
             console.log(res)
             return res.json()
         }
-    }).then(renderDogs)
+    }).then(renderCats)
     .catch(function(err) {
         console.log(err.message)
     })
 }
 
+//Function rendering dog information for page
 function renderDogs (dogData) {
     //Converts data into an array
     const dogDataArray = Array.from(dogData.data)
@@ -67,8 +74,9 @@ function renderDogs (dogData) {
     dogCardsContainer.innerHTML = ""
 
     //add page title
+    searchTerm = localStorage.getItem('user-zipcode')
     var dogPageTitle = document.createElement('h3')
-    dogPageTitle.textContent = "Dogs Available Near You"
+    dogPageTitle.textContent = `Dogs Available Near ${searchTerm}`
     dogPageTitleContainer.appendChild(dogPageTitle)
 
     //Card creation
@@ -122,6 +130,7 @@ footerForm.onsubmit = function(e) {
 //check zipcode format
 const checkZipcodeFormat = (str) => {
     return /^\d{5}(-\d{4})?$/.test(str);
+}
 
 const validateUserEmail = (userEmail) => {
     return userEmail.match(
