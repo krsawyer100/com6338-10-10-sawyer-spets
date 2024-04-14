@@ -10,11 +10,11 @@
     <meta name="description" content="document">
     <title>Furry Friends</title>
 </head>
-<body onload="myfunction(e)">
+<body>
     <header class="header">
         <nav class="nav">
             <a class="nav__logo" href="index.html">
-                <img src="images/logo-orange.png" alt="Logo" width="300" class=" nav__logo_img">
+                <img src="images/logo-orange.png" alt="Logo" width="300" class="nav__logo_img">
             </a>
             <a class="nav__link" href="cat.html">
                 <img src="images/cat-nav-orange.png" alt="Cat" width="150" class="nav__link_img_cat">
@@ -26,29 +26,29 @@
     </header>
 
     <main class="main">
-        <section class="main__hero">
+        <section class="main__hero flex">
             <h1 class="main__hero__call-to-action">In the market for a new furry friend?</h1>
             <h2 class="main__hero__call-to-action">Check out cats and dogs available for adoption!</h2>
             <a class="main__hero__call-to-action__button" href="#adoption-icon" style="background: url(images/arrow-icon.png)"></a>
         </section>
 
-        <section class="main__pet__adoption" id="adoption-icon">
-            <h3 class ="main__pet__adoption_text" >Available for Adoption</h3>
-            <div class="main__pet__adoption__img__container">
+        <section class="main__pet-adoption flex" id="adoption-icon">
+            <h3 class ="main__pet-adoption_title">Pets Available for Adoption</h3>
+            <div class="main__pet__adoption-img_container flex">
                 <a class="main__cat_link" href="cat.html">
-                    <img src="images/cat-button-orange.png" alt="cat-icon" class="main__link_img_cat"> 
+                    <img src="images/cat-button-orange.png" alt="cat-icon" class="main__link_img-cat"> 
                 </a>
                 <a class="main__dog_link" href="dog.html">
-                    <img src="images/dog-button-orange.png" alt="dog-icon" class="main__link_img_dog">
+                    <img src="images/dog-button-orange.png" alt="dog-icon" class="main__link_img-dog">
                 </a>
             </div>
         </section>
 
         <section class="main__pet__facts">
             <div class="main__pet__facts_container" id = facts_container>
-                <img src="images/dog_photo.jpeg" alt="dog-picture" class="main__facts_img_dog" id="img_size1">
+                <img src="images/dog_photo.jpeg" alt="dog-picture" class="main__facts_img" id="img_size1">
                 <div class="main__pet__facts__div" id = factsDiv>
-                    <h3 class="main__pet__facts_text" >Did You Know?</h3>
+                    <h3 class="main__pet__facts_text">Did You Know?</h3>
                     <h4 class="main__pet__facts_api" id="main__facts"></h4>
                 </div>
             </div>

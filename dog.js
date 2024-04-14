@@ -68,7 +68,7 @@ function renderDogs (dogData) {
 
     //add page title
     var dogPageTitle = document.createElement('h3')
-    dogPageTitle.textContent = "Dogs Available Near You"
+    dogPageTitle.textContent = `Dogs Available Near You`
     dogPageTitleContainer.appendChild(dogPageTitle)
 
     //Card creation
@@ -122,6 +122,7 @@ footerForm.onsubmit = function(e) {
 //check zipcode format
 const checkZipcodeFormat = (str) => {
     return /^\d{5}(-\d{4})?$/.test(str);
+}
 
 const validateUserEmail = (userEmail) => {
     return userEmail.match(
