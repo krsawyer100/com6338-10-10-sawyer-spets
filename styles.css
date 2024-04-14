@@ -223,8 +223,8 @@ h5 {
 
 .main__pet__facts__div {
     display: flex;
+    width: 30%;
     flex-direction: column;
-    padding-top: 120px;
 }
 
 .main__pet__facts_api {
