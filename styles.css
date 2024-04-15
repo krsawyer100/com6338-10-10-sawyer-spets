@@ -88,6 +88,7 @@ h5 {
 
 .nav__link {
     margin-left: 40px;
+    text-decoration: none;
 }
 
 .nav__link_img_cat, .nav__link_img_dog {
